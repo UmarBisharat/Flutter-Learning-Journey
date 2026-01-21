@@ -19,63 +19,60 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Lottery App',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
-          backgroundColor: Colors.cyan,
+          title: Center(child: Text('Lottery app',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 40,color: Colors.white),)),
+          backgroundColor: Colors.purple,
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(child: Text ('Lottery Winning Number is 4')),
-          SizedBox(
-            height: 20,
-          ),
-          Container(
-            height:  250,
-            width: 300,
-            decoration: BoxDecoration(
-              color: x==4 ? Colors.teal : Colors.grey.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(10),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: x == 4 ?
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Icon(Icons.done,color: Colors.green,size: 35,),
-                  SizedBox(
-                    height: 15,
+            Text('Lottery number is 4'),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                child: x == 4 ? Container(
+                  height: 250,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(Icons.check,color: Colors.green,size: 30,),
+                      Text('you won the lottery and your number is $x.'),
+                    ],
                   ),
-                  Text('Congratulations you have won the lottery, Your number is $x. \n',textAlign: TextAlign.center,),
-                ],
-              ):
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-               Icon(Icons.error,color: Colors.red,size: 35,),
-                SizedBox(
-                  height: 15,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.blue.withOpacity(.5),
+                  ),
+                ) :
+                Container(
+                  height: 250,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(Icons.error,color: Colors.red,size: 30,),
+                      Text('better luck next time your number is $x. \n' 'try again',textAlign: TextAlign.center,),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.purple.withOpacity(.5),
+                  ),
                 ),
-                Text('Better luck Next Time Your Number is $x. \n try again ',textAlign: TextAlign.center,),
-              ],
+
               ),
             ),
-          ),
-
           ],
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){
-         x = random.nextInt(6);
-         print(x);
-         setState(() {
+        floatingActionButton: FloatingActionButton(onPressed: (){
+          x = random.nextInt(5);
+          print(x);
+          setState(() {
 
-         });
-          },
-          child: Icon(Icons.refresh),
+          });
+        },
+          child: Icon(Icons.refresh_outlined),
         ),
       ),
     );
