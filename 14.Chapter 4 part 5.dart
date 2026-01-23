@@ -20,14 +20,16 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-RichText(
-    text: TextSpan(
-      text: 'Hello',
-      style: Theme.of(context).textTheme.bodyLarge!.copyWith(fontSize:58),
-      children: [
-        TextSpan(text: 'world', style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,)),
-      ],
-    ),
+Center(
+  child: RichText(
+      text: TextSpan(
+        text: 'Dont have an account',
+        style: Theme.of(context).textTheme.bodyLarge,
+        children: [
+          TextSpan(text: ' Sign Up', style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,decorationThickness: 2)),
+        ],
+      ),
+  ),
 ),
           ],
         ),
