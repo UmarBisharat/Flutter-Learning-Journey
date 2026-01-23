@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
           children: [
             SizedBox(height: 100),
             Divider(color: Colors.black, thickness: 2),
-            SizedBox(height: 100, child: VerticalDivider(color: Colors.black)),
+            SizedBox(height: 100, child: VerticalDivider(thickness: 2,color: Colors.black)),
             Divider(color: Colors.black, thickness: 2),
 
             Center(
