@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -13,25 +13,38 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child: Text('Practice',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 40),)),
+          title: Center(
+            child: Text(
+              'Practice',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 40),
+            ),
+          ),
           backgroundColor: Colors.pinkAccent,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-Center(
-  child: RichText(
-      text: TextSpan(
-        text: 'Dont have an account',
-        style: Theme.of(context).textTheme.bodyLarge,
-        children: [
-          TextSpan(text: ' Sign Up', style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,decoration: TextDecoration.underline,decorationThickness: 2)),
-        ],
-      ),
-  ),
-),
-          ],
+        body: Center(
+          child: RichText(
+            text: TextSpan(
+              text: "Don't have an account?",
+              style: TextStyle(
+                  color: Colors.black, // make sure it’s visible
+                  fontSize: 15),
+              children: [
+                TextSpan(
+                  text: " Sign Up",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue, // optional, looks like a link
+                    decoration: TextDecoration.underline,
+                    decorationThickness: 2,
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
