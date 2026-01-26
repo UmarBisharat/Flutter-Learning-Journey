@@ -44,3 +44,29 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+**************************************************************************************************************************************************
+🔹 What is Expanded in Flutter?
+
+Expanded is a widget used inside Row, Column, or Flex.
+It tells Flutter to take the available free space and fill it.
+
+👉 Without Expanded, widgets take only the space they need.
+👉 With Expanded, they stretch.
+
+🔹 Why do we use Expanded?
+
+✅ To avoid overflow errors
+✅ To divide space between widgets
+✅ To make UI responsive
+
+🔹 flex property (MOST IMPORTANT)
+
+flex controls how much space a widget takes relative to others.
+
+Rule:
+
+Space is divided in ratios
+
+Default flex = 1
