@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+         //  SizedBox is used to give a size limit (constraint) to a widget.
             SizedBox(
               child: Stack(
                 alignment: Alignment.center,
