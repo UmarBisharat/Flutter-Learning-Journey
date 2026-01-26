@@ -70,3 +70,13 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+***************************************************************************
+ Stack =
+🧠 What is Stack widget?
+Stack is a widget that places its children on top of each other (layer by layer).
+******************************************************************************
+ Positioned = 
+ 🧠 What is Positioned in Flutter?
+Positioned is a widget that lets you place a child widget at an exact location inside a Stack.
+ 
